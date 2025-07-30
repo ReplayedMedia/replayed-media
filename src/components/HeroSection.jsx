@@ -1,11 +1,11 @@
 import React from "react";
-import heroVideo from "../assets/hero.mp4";
 
 const HeroSection = () => {
   return (
     <div className="relative w-full h-screen overflow-hidden">
       {/* Fullscreen background video */}
       <video
+        src="/hero.mp4"
         className="absolute inset-0 w-full h-full object-cover"
         autoPlay
         muted
@@ -13,7 +13,6 @@ const HeroSection = () => {
         playsInline
         preload="auto"
       >
-        <source src="/hero.mp4" type="video/mp4" />
         Your browser doesn’t support HTML5 video.
       </video>
 
