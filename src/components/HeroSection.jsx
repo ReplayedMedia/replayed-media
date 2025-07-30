@@ -13,8 +13,7 @@ const HeroSection = () => {
         playsInline
         preload="auto"
       >
-        <source src={heroVideo} type="video/mp4" />
-        {/* Fallback text */}
+        <source src="/hero.mp4" type="video/mp4" />
         Your browser doesn’t support HTML5 video.
       </video>
 
