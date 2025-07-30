@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="sticky top-0 z-50 py-3 border-b border-neutral-700/80 bg-black/50">
+      <nav className="sticky top-0 z-50 py-3 border-b border-neutral-700/80 bg-black/80">
         <div className="container px-4 mx-auto relative flex items-center justify-between lg:text-sm">
           {/* Logo */}
           <a href="#hero" className="flex items-center flex-shrink-0">
