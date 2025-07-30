@@ -13,7 +13,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="sticky top-0 z-50 py-3 border-b border-neutral-700/80 bg-black/50">
-        <div className="container px-4 mx-auto flex items-center justify-between lg:text-sm">
+        <div className="container px-4 mx-auto relative flex items-center justify-between lg:text-sm">
           {/* Logo */}
           <a href="#hero" className="flex items-center flex-shrink-0">
             <img className="h-10 w-10 mr-2" src={logo} alt="Logo" />
@@ -22,8 +22,8 @@ const Navbar = () => {
             </span>
           </a>
 
-          {/* Desktop nav */}
-          <ul className="hidden lg:flex flex-1 justify-center space-x-12">
+          {/* Desktop nav — absolutely centered */}
+          <ul className="hidden lg:flex absolute inset-x-0 justify-center space-x-12">
             {navItems.map((item) => (
               <li key={item.href}>
                 <a href={item.href} className={linkClasses}>
@@ -44,17 +44,21 @@ const Navbar = () => {
                 hover:bg-white hover:text-black
               "
             >
-              Contact Us
+              Contact Us
             </a>
           </div>
 
           {/* Mobile menu toggle */}
-          <button onClick={toggleNavbar} className="lg:hidden text-white p-2">
+          <button
+            onClick={toggleNavbar}
+            className="lg:hidden text-white p-2"
+          >
             {mobileDrawerOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </nav>
 
+      {/* Mobile drawer */}
       {mobileDrawerOpen && (
         <div
           className="
@@ -87,7 +91,7 @@ const Navbar = () => {
                   hover:bg-white hover:text-black
                 "
               >
-                Contact Us
+                Contact Us
               </a>
             </li>
           </ul>
