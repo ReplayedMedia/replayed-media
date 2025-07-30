@@ -46,7 +46,7 @@ const Contact = () => {
       id="contact"
       className="relative mt-20 border-t border-neutral-800 min-h-[800px]"
     >
-      <h2 className="text-5xl lg:text-6xl text-center mt-20 tracking-wide mb-10">
+      <h2 className="text-5xl lg:text-6xl text-center mt-20 tracking-wide mb-10 bg-gradient-to-r from-white to-cyan-400 bg-clip-text text-transparent">
         Contact{" "}
         <span className="bg-gradient-to-r from-cyan-400 to-blue-600 text-transparent bg-clip-text">
           Us
