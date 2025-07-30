@@ -39,8 +39,19 @@ const Footer = () => (
 
     {/* Bottom bar */}
     <div className="border-t border-neutral-800">
-      <div className="max-w-7xl mx-auto px-6 py-6 flex flex-col md:flex-row items-center justify-between text-sm text-neutral-500">
-        <p>© {new Date().getFullYear()} Replayed Media. All rights reserved.</p>
+      <div
+        className="
+          max-w-7xl mx-auto px-6 py-6
+          flex flex-col items-center justify-center
+          text-xs         /* ← smaller by default */
+          md:flex-row md:justify-between md:text-sm
+          text-neutral-500
+        "
+      >
+        <p className="text-center md:text-left">
+          © {new Date().getFullYear()} Replayed Media. All rights reserved.
+        </p>
+
         <div className="flex gap-6 mt-3 md:mt-0">
           <a className="hover:text-neutral-300">Privacy Policy</a>
           <a className="hover:text-neutral-300">Terms of Service</a>
